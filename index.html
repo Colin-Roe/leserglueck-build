@@ -13,30 +13,30 @@
     </div>
     <div id="app">
       <div class="container-fluid header">
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <nav class="navbar navbar-expand-lg navbar-dark bgßdark" aria-expanded="false">
-              <div class="logo-container">
-                <div class="logo"></div>
-              </div>
-              <div class="navbar-header navbar-dark d-lg-none">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="icon-menu"></span>
-                </button>
-              </div>
-            
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="main navbar-nav">
-                  <li class="nav-item"><a class="nav-link" href="#warum">Klartext</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#preise">Preise</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#kundenstimmen">Kundenstimmen</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#about-me">Über mich</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#plain-language">Plain Language</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
-                </ul>
-              </div>
-            </nav>
-          </div>        
+        <div class="row justify-content-md-center align-items-center">
+
+          <nav class="navbar navbar-expand-lg navbar-dark bgßdark justify-content-end" aria-expanded="false">
+            <a class="navbar-brand logo-container" href="#">
+              <div class="logo"></div>
+            </a>
+            <div class="navbar-header navbar-dark d-lg-none">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-menu"></span>
+              </button>
+            </div>
+          
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+              <ul class="main navbar-nav justify-content-end">
+                <li class="nav-item"><a class="nav-link" href="#warum">Klartext</a></li>
+                <li class="nav-item"><a class="nav-link" href="#preise">Preise</a></li>
+                <li class="nav-item"><a class="nav-link" href="#kundenstimmen">Kundenstimmen</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about-me">Über mich</a></li>
+                <li class="nav-item"><a class="nav-link" href="#plain-language">Plain Language</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
+              </ul>
+            </div>
+          </nav>
+
         </div>
       </div>
       <div class="hero hero-home">
@@ -276,32 +276,35 @@
         </div>
         <div class="row rich-text">
           <div class="col-sm">
-           <form method="POST" name="leserglueckEmailForm" action="form-to-email.php">
+           <form action="mail.php" method="POST" id="contact-form" name="leserglueckEmailForm">
             <div class="form-group">
-              <label for="formGroupNameInput">Dein Name</label>
-              <input class="form-control" id="formGroupNameInput" name="formGroupNameInput">
+              <label for="nameInput">Dein Name</label>
+              <input class="form-control" id="nameInput" name="nameInput">
             </div>
             <div class="form-group">
-              <label for="emailFormControl">Deine E-mail-Adresse</label>
-              <input type="email" class="form-control" id="emailFormControl" name="emailFormControl" placeholder="name@example.com">
+              <label for="emailInput">Deine E-mail-Adresse</label>
+              <input type="email" class="form-control" id="emailInput" name="emailInput" placeholder="name@example.com">
             </div>
             <div class="form-group">
-              <label for="formGroupWieInput">Wie hast du mich gefunden?</label>
-              <input class="form-control" id="formGroupWieInput" name="formGroupWieInput">
+              <label for="wieInput">Wie hast du mich gefunden?</label>
+              <input class="form-control" id="wieInput" name="wieInput">
             </div>
             <div class="form-group">
-              <label for="formGroupBetreffInput">Betreff Deiner Nachricht</label>
-              <input class="form-control" id="formGroupBetreffInput" name="formGroupBetreffInput">
+              <label for="subjectInput">Betreff Deiner Nachricht</label>
+              <input class="form-control" id="subjectInput" name="subjectInput">
             </div>
             <div class="form-group">
-              <label for="messageFormControlTextarea1">Example textarea</label>
-              <textarea class="form-control" id="messageFormControlTextarea1" name="messageFormControlTextarea1" rows="3"></textarea>
+              <label for="messageInput">Example textarea</label>
+              <textarea class="form-control" id="messageInput" name="messageInput" rows="3"></textarea>
             </div>
             <div class="form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div id="message_post"></div>
+            <button id="submitf" name="submitf" type="submit" class="submit-detailss btn btn-primary">Submit</button>
+            <p class="success-messages" style="color:#149214;display:none"><i class="fa fa-check-circle contact-done-icon"></i> Sent Successfuly...</p>
+            <p class="unsuccess-messages" style="color:red;display:none"><i class="fa fa-times-circle contact-done-icon"></i> Sending failed...</p>
           </form>   
           </div>
           <div class="col-sm">
