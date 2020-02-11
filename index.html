@@ -14,14 +14,12 @@
     <div id="app">
       <div class="container-fluid header">
         <div class="container">
-        <div class="row justify-content-md-center align-items-center">
-
-          <nav style="display:contents" class="navbar navbar-expand-lg navbar-dark bgßdark justify-content-end" aria-expanded="false">
+          <nav style="display:flex" class="navbar navbar-expand-lg navbar-dark bgßdark justify-content-end" aria-expanded="false">
             <a class="navbar-brand logo-container" href="#">
               <div class="logo"></div>
             </a>
             <div class="navbar-header navbar-dark d-lg-none">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-menu"></span>
               </button>
             </div>
@@ -37,8 +35,6 @@
               </ul>
             </div>
           </nav>
-
-        </div>
         </div>
       </div>
       <div class="hero hero-home">
@@ -280,33 +276,34 @@
           <div class="col-sm">
            <form action="mail.php" method="POST" id="contact-form" name="leserglueckEmailForm">
             <div class="form-group">
-              <label for="nameInput">Dein Name</label>
-              <input class="form-control" id="nameInput" name="nameInput">
-            </div>
+                <label for="nameInput">Dein Name</label><span id="userName-info" class="info"></span><br/>
+                <input class="form-control" id="nameInput" name="nameInput" required oninvalid='this.setCustomValidity("Bitte geben Sie einen Namen ein")' oninput='setCustomValidity("")'/>
+              </div>
             <div class="form-group">
-              <label for="emailInput">Deine E-mail-Adresse</label>
-              <input type="email" class="form-control" id="emailInput" name="emailInput" placeholder="name@example.com">
+              <label for="emailInput">Deine E-mail-Adresse</label><span id="userEmail-info" class="info"></span><br/>
+              <input type="email" class="form-control" id="emailInput" name="emailInput" placeholder="name@example.com" required oninvalid='this.setCustomValidity("Bitte geben Sie eine gültige E-Mail-Adresse ein")' oninput='setCustomValidity("")'>
             </div>
             <div class="form-group">
               <label for="wieInput">Wie hast du mich gefunden?</label>
               <input class="form-control" id="wieInput" name="wieInput">
             </div>
             <div class="form-group">
-              <label for="subjectInput">Betreff Deiner Nachricht</label>
-              <input class="form-control" id="subjectInput" name="subjectInput">
+              <label for="subjectInput">Betreff Deiner Nachricht</label><span id="subject-info" class="info"></span><br/>
+              <input class="form-control" id="subjectInput" name="subjectInput" required oninvalid='this.setCustomValidity("Bitte geben Sie einen Betreff ein")' oninput='setCustomValidity("")'>
             </div>
             <div class="form-group">
-              <label for="messageInput">Example textarea</label>
-              <textarea class="form-control" id="messageInput" name="messageInput" rows="3"></textarea>
+              <label for="messageInput">Example textarea</label><span id="message-info" class="info"></span><br/>
+              <textarea class="form-control" id="messageInput" name="messageInput" rows="3" required oninvalid='this.setCustomValidity("Bitte geben Sie einen Text ein")' oninput='setCustomValidity("")'></textarea>
             </div>
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <div class="form-checkbox">              
+              <label class="form-check-label" for="datenschutzCheck">Haben Sie den Datenschutz gelesen?</label>
+              <input type="checkbox" class="form-check-input" id="datenschutzCheck" required oninvalid='this.setCustomValidity("Bitte geben Sie einen Text ein")' oninput='setCustomValidity("")'>
+              <div id="check-info-container"><span id="check-info" class="info"></span></div><br/>
             </div>
             <div id="message_post"></div>
-            <button id="submitf" name="submitf" type="submit" class="submit-detailss btn btn-primary">Submit</button>
-            <p class="success-messages" style="color:#149214;display:none"><i class="fa fa-check-circle contact-done-icon"></i> Sent Successfuly...</p>
-            <p class="unsuccess-messages" style="color:red;display:none"><i class="fa fa-times-circle contact-done-icon"></i> Sending failed...</p>
+            <button id="submitf" name="submitf" type="submit" class="action-btn-primary">Submit</button>
+            <p class="success-messages" style="color:#149214;display:none"><i class="fa fa-check-circle contact-done-icon"></i> Erfolgreich gesendet...</p>
+            <p class="unsuccess-messages" style="color:red;display:none"><i class="fa fa-times-circle contact-done-icon"></i> Senden fehlgeschlagen...</p>
           </form>   
           </div>
           <div class="col-sm">
@@ -331,6 +328,5 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script type="”text/javascript”" src="”dist/bundle.js”"> </script>
   <script type="text/javascript" src="site.bundle.js"></script></body>
 </html>

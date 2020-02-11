@@ -1,8 +1,9 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
 require 'vendor/autoload.php';
+
+
 
 $name = $_POST['nameInput'];
 $visitor_email = $_POST['emailInput'];
@@ -48,23 +49,28 @@ function sendEmail($enquiryData) {
         // Content
         $mail->isHTML(true);                                  // Set email format to HTML
         $mail->Subject = $enquiryData['subject'];
-        $mail->Body    = "You have received a new message from the user $name .\n".
-            $enquiryData['message'];
-        $mail->AltBody = strip_tags($enquiryData['message']);
 
-        $mail->send();
-        echo 'Message has been sent';
+        $mailContent = "<h2>Contact form submission</h2>
+            <p>Name: " . $enquiryData['fName'] . "</p>" . 
+            "<p>Message: " . $enquiryData['message'] . "</p>" . 
+            "<p>Email: " . $enquiryData['visitorEmail'] . "</p>" .
+            "<p>Wie hast du mich gefunden? " . $enquiryData['how'] . "</p>";
+
+        $mail->Body = $mailContent;
+        $mail->AltBody = strip_tags($mailContent);
+
+        // Send the message, check for errors
+        if ($mail->send()) {
+            print 'Message has been sent';
+        }
+        else {
+            print 'Message could not be sent. Mailer Error: '. $mail->ErrorInfo;
+        }
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        print "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
 }
 
 sendEmail($enquiryData);
-
-// $email_from = 'coileain@protonmail.com';//<== update the email address
-// $email_subject = "New Form submission";
-// $email_body = "You have received a new message from the user $name.\n".
-//     "Here is the message:\n $message".
-// $to = "coileain@protonmail.com";//<== update the email address
 
 ?>
