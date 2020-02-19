@@ -45,7 +45,7 @@
               <h1 class="display-1 marker text-uppercase">Klartext</h1>
               <h1 class="display-3 text-uppercase">Für Dein</h1>
               <h1 class="display-1 marker text-uppercase">Traumprojekt</h1>
-              <a href="#warum" class="action-btn-hero mt-3">Mehr</a>
+              <a href="#warum" class="action-btn-hero mt-3 scroll">Mehr</a>
             </div>
           </div>
         </div>
@@ -130,7 +130,7 @@
                 <li>Anzahl der Korrekturschleifen</li>
                 <li>Zusatzleistungen, z.B. Einpflegen der Inhalte in eine Webseite.</li>
               </ol>
-              <p><span class="green">Du möchtest wissen, wie viel Dein Projekt kosten würde? Schreib' mir eine Nachricht und ich erstelle Dir ein Angebot!</span></p>
+              <p><span class="green">Du möchtest wissen, wie viel Dein Projekt kosten würde? <a href="#kontakt" class="scroll text-link" title="Kontaktformular">Schreib' mir eine Nachricht</a> und ich erstelle Dir ein Angebot!</span></p>
             </div>
           </div>
         </div>
@@ -221,7 +221,7 @@
               <p>Während meines Studiums im Medien- und Kultur-Management warf mich in jede Schreib-Erfahrung, die sich für mich auftat. Das <span class="green"></span>leicht verständliche Schreiben und Gestalten habe ich dabei aus ganz verschiedenen Sichtweisen gelernt.</p>
               <p>Nach meinem Masterabschluss ging es rasant weiter: Ich arbeitete für mehrere <span class="green">Festivals und Medienunternehmen</span> in Deutschland und Irland. <span class="green">Als Texte-Schreiberin, Fehler-Finderin, Ideen-Umsetzerin und Orga-Tier.</span> Leider auf Kosten meiner Gesundheit: 2016 bekam ich ein heftiges Fieber und konnte zwei Monate kaum aufstehen. </p>
               <p>Nach einer Auszeit in Südostasien stand mein neues Ziel fest: <span class="green">Ich möchte als freie Texterin für Content-Marketing und Einfache Sprache arbeiten.</span> Denn ich bringe die <span class="green">drei wichtigsten Fähigkeiten</span> dafür mit: <span class="green">die journalistische Erfahrung, das Marketing-Wissen und das Gefühl für ansprechende Konzepte.</span></p>
-              <p>Was mich besonders freut: <span class="green">Wenn ich durch meine Arbeit sinnvollen Angeboten mehr Sichtbarkeit geben kann.</span> Angebote, die Anderen wirklich weiterhelfen. Von Menschen, die bewusst ihren eigenen Weg gehen. Du hast ein solches Angebot? <span class="green">Dann nichts wie hin zum Kontaktformular!</span></p>
+              <p>Was mich besonders freut: <span class="green">Wenn ich durch meine Arbeit sinnvollen Angeboten mehr Sichtbarkeit geben kann.</span> Angebote, die Anderen wirklich weiterhelfen. Von Menschen, die bewusst ihren eigenen Weg gehen. Du hast ein solches Angebot? Dann nichts wie hin zum <a href="#kontakt" class="scroll text-link">Kontaktformular!</a></p>
             </div>
           </div>
         </div>
@@ -235,7 +235,7 @@
               <p>Während meines Studiums im Medien- und Kultur-Management warf mich in jede Schreib-Erfahrung, die sich für mich auftat. Das <span class="green"></span>leicht verständliche Schreiben und Gestalten habe ich dabei aus ganz verschiedenen Sichtweisen gelernt.</p>
               <p>Nach meinem Masterabschluss ging es rasant weiter: Ich arbeitete für mehrere <span class="green">Festivals und Medienunternehmen</span> in Deutschland und Irland. <span class="green">Als Texte-Schreiberin, Fehler-Finderin, Ideen-Umsetzerin und Orga-Tier.</span> Leider auf Kosten meiner Gesundheit: 2016 bekam ich ein heftiges Fieber und konnte zwei Monate kaum aufstehen. </p>
               <p>Nach einer Auszeit in Südostasien stand mein neues Ziel fest: <span class="green">Ich möchte als freie Texterin für Content-Marketing und Einfache Sprache arbeiten.</span> Denn ich bringe die <span class="green">drei wichtigsten Fähigkeiten</span> dafür mit: <span class="green">die journalistische Erfahrung, das Marketing-Wissen und das Gefühl für ansprechende Konzepte.</span></p>
-              <p>Was mich besonders freut: <span class="green">Wenn ich durch meine Arbeit sinnvollen Angeboten mehr Sichtbarkeit geben kann.</span> Angebote, die Anderen wirklich weiterhelfen. Von Menschen, die bewusst ihren eigenen Weg gehen. Du hast ein solches Angebot? <span class="green">Dann nichts wie hin zum Kontaktformular!</span></p>
+              <p>Was mich besonders freut: <span class="green">Wenn ich durch meine Arbeit sinnvollen Angeboten mehr Sichtbarkeit geben kann.</span> Angebote, die Anderen wirklich weiterhelfen. Von Menschen, die bewusst ihren eigenen Weg gehen. Du hast ein solches Angebot? Dann nichts wie hin zum <a href="#kontakt" class="scroll text-link">Kontaktformular!</a></p>
             </div>
           </div>
         </div>
@@ -249,25 +249,24 @@
           <div class="col-sm">
            <form action="mail.php" method="POST" id="contact-form" name="leserglueckEmailForm">
             <div class="form-group">
-                <label for="nameInput">Dein Name</label><span id="userName-info" class="info"></span><br/>
-                <input class="form-control" id="nameInput" name="nameInput" required oninvalid='this.setCustomValidity("Bitte geben Sie einen Namen ein")' oninput='setCustomValidity("")'/>
+                <label for="nameInput">Dein Name *</label><span id="userName-info" class="info"></span><br/>
+                <input class="form-control" id="nameInput" name="nameInput" required oninvalid='this.setCustomValidity("Bitte gib einen Namen ein")' oninput='setCustomValidity("")'/>
               </div>
             <div class="form-group">
-              <label for="emailInput">Deine E-Mail-Adresse</label><span id="userEmail-info" class="info"></span><br/>
-              <input type="email" class="form-control" id="emailInput" name="emailInput" placeholder="name@example.com" required oninvalid='this.setCustomValidity("Bitte geben Sie eine gültige E-Mail-Adresse ein")' oninput='setCustomValidity("")'>
+              <label for="emailInput">Deine E-Mail-Adresse *</label><span id="userEmail-info" class="info"></span><br/>
+              <input type="email" class="form-control" id="emailInput" name="emailInput" placeholder="name@example.com" required oninvalid='this.setCustomValidity("Bitte gib eine gültige E-Mail-Adresse ein")' oninput='setCustomValidity("")'>
             </div>
             <div class="form-group">
-              <label for="subjectInput">Betreff Deiner Nachricht</label><span id="subject-info" class="info"></span><br/>
-              <input class="form-control" id="subjectInput" name="subjectInput" required oninvalid='this.setCustomValidity("Bitte geben Sie einen Betreff ein")' oninput='setCustomValidity("")'>
+              <label for="subjectInput">Betreff Deiner Nachricht *</label><span id="subject-info" class="info"></span><br/>
+              <input class="form-control" id="subjectInput" name="subjectInput" required oninvalid='this.setCustomValidity("Bitte gib einen Betreff ein")' oninput='setCustomValidity("")'>
             </div>
             <div class="form-group">
-              <label for="messageInput">Deine Nachricht</label><span id="message-info" class="info"></span><br/>
+              <label for="messageInput">Deine Nachricht *</label><span id="message-info" class="info"></span><br/>
               <textarea class="form-control" id="messageInput" name="messageInput" rows="3" required oninvalid='this.setCustomValidity("Bitte gib eine Nachricht ein.")' oninput='setCustomValidity("")'></textarea>
             </div>
-            <div class="form-checkbox mt-5 mb-5">              
-              <input type="checkbox" class="form-check-input" id="datenschutzCheck" required oninvalid='this.setCustomValidity("Bitte bestätige die Datenschutzerklärung.")' oninput='setCustomValidity("")'>
-              <label class="form-check-label" for="datenschutzCheck">Ich habe die Datenschutzerklärung gelesen.</label>
-              <div id="check-info-container"><span id="check-info" class="info"></span></div><br/>
+            <div class="mt-5 mb-5">              
+              <p>Mit dem Absenden des Kontaktformulars erklärst Du Dich einverstanden, dass Deine Daten zur Bearbeitung Deines Anliegens verwendet werden. Weitere Informationen und Widerrufshinweise findest Du in der Datenschutzerklärung.</p><br/>
+              <p>Mit einem Sternchen (*) markierte Felder sind Pflichtangaben.</p>
             </div>
             <div id="message_post"></div>
             <button id="submitf" name="submitf" type="submit" class="action-btn-primary">Los geht's!</button>
@@ -281,7 +280,7 @@
       </div>
       <div class="footer d-flex align-items-center">
         <section class="container">
-          <div class="row justify-content-center">
+          <div class="row justify-content-center text-uppercase">
             <div id="boring-text" class="col-md-8 col-sm-12">
               <p>&copy; 2020 Leserglueck.de · Dagmar Mehling  · Texterin für Content Marketing und Einfache Sprache</p>
             </div>
