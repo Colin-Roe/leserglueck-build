@@ -10,10 +10,31 @@
       if (document.cookie.indexOf(disableStr + '=true') > -1) {
         window[disableStr] = true;
       }
+      else {
+        window[disableStr] = false;
+      }
+      function gaSaveSettings() {
+        if ($('#gehtKlar').is(':checked')){
+          gaOptIn();
+        }
+        if ($('#gehtNichtKlar').is(':checked')){
+          gaOptOut();
+        }
+      }
       // Opt-out function
-      function gaOptout() {
+      function gaOptOut() {
         document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
         window[disableStr] = true;
+        $('#cookie-notice').hide();
+        console.log('You have opted out of Google Analytics');
+        alert('Das Tracking durch Google Analytics wurde in Ihrem Browser für diese Website deaktiviert.');
+      }
+      // Opt-In function
+      function gaOptIn() {
+        document.cookie = disableStr + '=false; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+        window[disableStr] = false;
+        $('#cookie-notice').hide();
+        console.log('You have opted in of Google Analytics');
       }
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158821201-1"></script>
@@ -30,7 +51,7 @@
     />
     <title>Leserglueck</title>
     <script src="https://use.fontawesome.com/fe5f16028b.js"></script>
-  <link rel="shortcut icon" href="favicon.ico"><link href="site.css" rel="stylesheet"></head>
+  <link rel="shortcut icon" href="favicon.ico"><link href="site.b35c799267cc2eec5732.css" rel="stylesheet"></head>
 
   <body
     data-spy="scroll"
@@ -243,6 +264,33 @@
           </div>
         </section>
       </div>
+      <div id="cookie-notice" class="container-fluid cookie-bottom">
+        <span id="cookie-close">Close</span>
+        <div class="container mt-5 mb-5">
+          <div class="row">
+            <div class="col-md-8">Wir verwenden Cookies, um die Webseite zu betreiben und noch besser zu machen. Wenn das für Dich ok ist, klicke auf "Einverstanden". <a href="datenschutz.html#googleAnalytics" class="mehr-erfahren">Mehr erfahren</a> </div>
+            <div class="col-md-4">
+              <button id="cookie-einverstanden" class="action-btn-primary" onClick="gaOptIn()">Einverstanden</button>
+              <button id="cookie-einstellungen" class="action-btn-primary" type="button" data-toggle="collapse" data-target="#cookie-radio-settings" aria-expanded="false" aria-controls="cookie-radio-settings">Cookie-Einstellungen</button>
+            </div>
+          </div>
+          <div id="cookie-radio-settings" class="collapse mt-3 mt-3 flex-column">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="cookieRadios" id="gehtKlar" value="gehtKlar">
+              <label class="form-check-label ml-2" for="gehtKlar">
+                Geht klar
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="cookieRadios" id="gehtNichtKlar" value="gehtNichtKlar" checked>
+              <label class="form-check-label ml-2" for="gehtNichtKlar">
+                Geht Nicht klar
+              </label>
+            </div>   
+            <button id="cookie-speichern" class="action-btn-primary mt-3" onclick="gaSaveSettings()">Einstellungen speichern</button>                                 
+          </div>
+        </div>
+      </div>
     </div>
 
     <script
@@ -260,5 +308,5 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-  <script type="text/javascript" src="site.bundle.js"></script></body>
+  <script type="text/javascript" src="site.b35c799267cc2eec5732.bundle.js"></script></body>
 </html>
