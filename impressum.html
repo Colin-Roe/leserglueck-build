@@ -51,7 +51,7 @@
     />
     <title>Leserglueck</title>
     <script src="https://use.fontawesome.com/fe5f16028b.js"></script>
-  <link rel="shortcut icon" href="favicon.ico"><link href="site.b35c799267cc2eec5732.css" rel="stylesheet"></head>
+  <link rel="shortcut icon" href="favicon.ico"><link href="site.67f571190ceb79ff0dfb.css" rel="stylesheet"></head>
 
   <body
     data-spy="scroll"
@@ -249,7 +249,7 @@
       </div>
 
       <div class="footer d-flex align-items-center">
-        <section class="container">
+        <section class="container-fluid">
           <div class="row justify-content-center">
             <div id="boring-text" class="col-md-8 col-sm-12">
               <p>
@@ -259,7 +259,8 @@
             </div>
             <div id="boring-links" class="col-md-4 col-sm-12">
               <a class="footer-link" href="impressum.html">Impressum</a> ·
-              <a class="footer-link" href="datenschutz.html">Datenschutz</a>
+              <a class="footer-link" href="datenschutz.html">Datenschutz</a> ·
+              <a id="toggle-cookie-settings" class="footer-link" href="javascript:void(0);">Cookie-Einstellungen</a>             
             </div>
           </div>
         </section>
@@ -268,26 +269,28 @@
         <span id="cookie-close">Close</span>
         <div class="container mt-5 mb-5">
           <div class="row">
-            <div class="col-md-8">Wir verwenden Cookies, um die Webseite zu betreiben und noch besser zu machen. Wenn das für Dich ok ist, klicke auf "Einverstanden". <a href="datenschutz.html#googleAnalytics" class="mehr-erfahren">Mehr erfahren</a> </div>
-            <div class="col-md-4">
+            <div class="col-lg-8">Wir verwenden Cookies, um die Webseite zu betreiben und noch besser zu machen. Wenn das für Dich ok ist, klicke auf "Einverstanden". <a href="datenschutz.html#googleAnalytics" class="mehr-erfahren">Mehr erfahren</a> </div>
+            <div class="col-lg-4">
               <button id="cookie-einverstanden" class="action-btn-primary" onClick="gaOptIn()">Einverstanden</button>
-              <button id="cookie-einstellungen" class="action-btn-primary" type="button" data-toggle="collapse" data-target="#cookie-radio-settings" aria-expanded="false" aria-controls="cookie-radio-settings">Cookie-Einstellungen</button>
+              <button id="cookie-einstellungen" type="button" data-toggle="collapse" data-target="#cookie-radio-settings" aria-expanded="false" aria-controls="cookie-radio-settings">Cookie-Einstellungen</button>
             </div>
           </div>
-          <div id="cookie-radio-settings" class="collapse mt-3 mt-3 flex-column">
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="cookieRadios" id="gehtKlar" value="gehtKlar">
-              <label class="form-check-label ml-2" for="gehtKlar">
-                Geht klar
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="cookieRadios" id="gehtNichtKlar" value="gehtNichtKlar" checked>
-              <label class="form-check-label ml-2" for="gehtNichtKlar">
-                Geht Nicht klar
-              </label>
-            </div>   
-            <button id="cookie-speichern" class="action-btn-primary mt-3" onclick="gaSaveSettings()">Einstellungen speichern</button>                                 
+          <div id="cookie-radio-settings" class="row collapse mt-3 mt-3 flex-column">
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="cookieRadios" id="gehtKlar" value="gehtKlar">
+                <label class="form-check-label ml-2" for="gehtKlar">
+                  Geht klar
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="cookieRadios" id="gehtNichtKlar" value="gehtNichtKlar" checked>
+                <label class="form-check-label ml-2" for="gehtNichtKlar">
+                  Geht nicht klar
+                </label>
+              </div>   
+              <button id="cookie-speichern" class="action-btn-primary mt-3" onclick="gaSaveSettings()">Einstellungen speichern</button>  
+            </div>                               
           </div>
         </div>
       </div>
@@ -308,5 +311,5 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-  <script type="text/javascript" src="site.b35c799267cc2eec5732.bundle.js"></script></body>
+  <script type="text/javascript" src="site.67f571190ceb79ff0dfb.bundle.js"></script></body>
 </html>

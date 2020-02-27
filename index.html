@@ -10,7 +10,7 @@
     <meta name="Description" content="Digitaler Klartext für dein Herzensprojekt. Ich bin Dagmar Mehling und schreibe Klartext für Dein Herzensprojekt. Einfache Sprache.">
     <title>Leserglueck</title>
     <script src="https://use.fontawesome.com/fe5f16028b.js"></script>
-  <link rel="shortcut icon" href="favicon.ico"><link href="site.b35c799267cc2eec5732.css" rel="stylesheet"></head>
+  <link rel="shortcut icon" href="favicon.ico"><link href="site.67f571190ceb79ff0dfb.css" rel="stylesheet"></head>
 
   <body data-spy="scroll" data-target="#navbarSupportedContent" data-offset="161">
     <div id="top" class="d-flex align-items-center justify-content-center" style="display:none!important">
@@ -240,7 +240,7 @@
           <h1 class="display-1 marker ml-4">Kontakt</h1>
         </div>
         <div class="row rich-text">
-          <div class="col-sm">
+          <div class="col-sm col-md-6">
            <form action="mail.php" method="POST" id="contact-form" name="leserglueckEmailForm">
             <div class="form-group">
                 <label for="nameInput">Dein Name *</label><span id="userName-info" class="info"></span><br/>
@@ -268,17 +268,33 @@
             <div class="unsuccess-messages" style="color:red;display:none"><i class="fa fa-times-circle contact-done-icon"></i> Senden fehlgeschlagen...</div>
           </form>   
           </div>
-          <div class="col-sm">
+          <div id="social-container" class="col-sm col-md-5 offset-md-1">
+            <div class="row">
+              <h2 class="font-weight-bold">Social Media</h2>
+            </div>
+            <div class="row social-icons">
+              <a href="https://www.instagram.com/dagmar_leserglueck/" title="Instagram"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+              <a href="https://www.facebook.com/Dagmar-Mehling-Lesergl%C3%BCck-Texterin-f%C3%BCr-Content-Marketing-102601814672396/" title="Facebook"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i></a>
+              <a href="https://www.xing.com/profile/Dagmar_Mehling/portfolio" title="Xing"><i class="fa fa-xing-square fa-3x" aria-hidden="true"></i></a>
+            </div>
+            <div class="row mt-5 mb-5">
+              <h2 class="font-weight-bold">Antwortzeiten</h2>
+              <p>Deine Nachricht wird von Montag bis Freitag beantwortet. Bitte rechne auch werktags eine Antwortzeit von bis zu 48 Stunden ein.</p>
+            </div>
+            <div class="row flex-column mt-5 mb-5">
+              <h2 class="font-weight-bold">Bürozeiten</h2>
+              <p>Montag bis Donnerstag<br/>9 bis 12 Uhr<br/>14 bis 17 Uhr</p>
+            </div>
           </div>
         </div>
       </div>
       <div class="footer d-flex align-items-center">
-        <section class="container">
+        <section class="container-fluid">
           <div class="row justify-content-center text-uppercase">
-            <div id="boring-text" class="col-md-8 col-sm-12">
-              <p>&copy; 2020 Leserglueck.de · Dagmar Mehling  · Texterin für Content-Marketing und Einfache Sprache</p>
+            <div id="boring-text" class="col-lg-8 col-md-12">
+              <p>&copy; 2020 Leserglueck.de · Dagmar Mehling  · Texterin für Content-Marketing</p>
             </div>
-            <div id="boring-links" class="col-md-4 col-sm-12">
+            <div id="boring-links" class="col-lg-4 col-md-12">
               <a class="footer-link" href="impressum.html">Impressum</a> · <a class="footer-link" href="datenschutz.html">Datenschutz</a> · <a id="toggle-cookie-settings" class="footer-link" href="javascript:void(0);">Cookie-Einstellungen</a>
             </div>
           </div>
@@ -288,26 +304,28 @@
         <span id="cookie-close">Close</span>
         <div class="container mt-5 mb-5">
           <div class="row">
-            <div class="col-md-8">Wir verwenden Cookies, um die Webseite zu betreiben und noch besser zu machen. Wenn das für Dich ok ist, klicke auf "Einverstanden". <a href="datenschutz.html#googleAnalytics" class="mehr-erfahren">Mehr erfahren</a> </div>
-            <div class="col-md-4">
+            <div class="col-lg-8">Wir verwenden Cookies, um die Webseite zu betreiben und noch besser zu machen. Wenn das für Dich ok ist, klicke auf "Einverstanden". <a href="datenschutz.html#googleAnalytics" class="mehr-erfahren">Mehr erfahren</a> </div>
+            <div class="col-lg-4">
               <button id="cookie-einverstanden" class="action-btn-primary" onclick="gaOptIn()">Einverstanden</button>
-              <button id="cookie-einstellungen" class="action-btn-primary" type="button" data-toggle="collapse" data-target="#cookie-radio-settings" aria-expanded="false" aria-controls="cookie-radio-settings">Cookie-Einstellungen</button>
+              <button id="cookie-einstellungen" type="button" data-toggle="collapse" data-target="#cookie-radio-settings" aria-expanded="false" aria-controls="cookie-radio-settings">Cookie-Einstellungen</button>
             </div>
           </div>
-          <div id="cookie-radio-settings" class="collapse mt-3 mt-3 flex-column">
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="cookieRadios" id="gehtKlar" value="gehtKlar">
-              <label class="form-check-label ml-2" for="gehtKlar">
-                Geht klar
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="cookieRadios" id="gehtNichtKlar" value="gehtNichtKlar" checked="checked">
-              <label class="form-check-label ml-2" for="gehtNichtKlar">
-                Geht Nicht klar
-              </label>
-            </div>   
-            <button id="cookie-speichern" class="action-btn-primary mt-3" onclick="gaSaveSettings()">Einstellungen speichern</button>                                 
+          <div id="cookie-radio-settings" class="row collapse mt-3 mt-3 flex-column">
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="cookieRadios" id="gehtKlar" value="gehtKlar">
+                <label class="form-check-label ml-2" for="gehtKlar">
+                  Geht klar
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="cookieRadios" id="gehtNichtKlar" value="gehtNichtKlar" checked="checked">
+                <label class="form-check-label ml-2" for="gehtNichtKlar">
+                  Geht nicht klar
+                </label>
+              </div>   
+              <button id="cookie-speichern" class="action-btn-primary mt-3" onclick="gaSaveSettings()">Einstellungen speichern</button>  
+            </div>                               
           </div>
         </div>
       </div>
@@ -316,5 +334,5 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="site.b35c799267cc2eec5732.bundle.js"></script></body>
+  <script type="text/javascript" src="site.67f571190ceb79ff0dfb.bundle.js"></script></body>
 </html>
